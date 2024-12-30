@@ -101,23 +101,23 @@
         <h2>Enter Product Details</h2>
 
         <div class="input-group">
-            <label for="productName">Product Name:</label>
-            <input type="text" id="productName" placeholder="Enter product name">
+            <label for="s_name">Product Name:</label>
+            <input type="text" id="s_name" placeholder="Enter product name">
         </div>
 
         <div class="input-group">
-            <label for="productDescription">Product Description:</label>
-            <textarea id="productDescription" rows="4" placeholder="Enter product description"></textarea>
+            <label for="s_description">Product Description:</label>
+            <textarea id="s_description" rows="4" placeholder="Enter product description"></textarea>
         </div>
 
         <div class="input-group">
-            <label for="productBreadcrumb">Product Breadcrumb:</label>
-            <input type="text" id="productBreadcrumb" placeholder="Enter product breadcrumb">
+            <label for="s_breadcrumb">Product Breadcrumb:</label>
+            <input type="text" id="s_breadcrumb" placeholder="Enter product breadcrumb">
         </div>
 
         <div class="input-group">
-            <label for="productBrand">Product Brand:</label>
-            <input type="text" id="productBrand" placeholder="Enter product brand">
+            <label for="s_brand">Product Brand:</label>
+            <input type="text" id="s_brand" placeholder="Enter product brand">
         </div>
 
         <button id="classifyButton">Classify Product</button>
@@ -148,16 +148,16 @@
         const level3Span = document.getElementById('level3');
 
         classifyButton.addEventListener('click', async () => {
-            const productName = document.getElementById('productName').value;
-            const productDescription = document.getElementById('productDescription').value;
-            const productBreadcrumb = document.getElementById('productBreadcrumb').value;
-            const productBrand = document.getElementById('productBrand').value;
+            const productName = document.getElementById('s_name').value;
+            const productDescription = document.getElementById('s_description').value;
+            const productBreadcrumb = document.getElementById('s_breadcrumb').value;
+            const productBrand = document.getElementById('s_brand').value;
 
             const requestData = {
-                s_name: productName,
-                s_description: productDescription,
-                s_breadcrumb: productBreadcrumb,
-                s_brand: productBrand,
+                s_name,
+                s_description,
+                s_breadcrumb,
+                s_brand,
             };
 
             try {
